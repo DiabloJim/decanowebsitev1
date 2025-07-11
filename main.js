@@ -330,7 +330,7 @@ refillBtn?.addEventListener("click", () => {
 });
 
 noRefillBtn?.addEventListener("click", () => {
-    window.location.href = "personalweb.html";
+    window.location.href = "index.html";
 });
 
 function animateJoinSection() {
