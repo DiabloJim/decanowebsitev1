@@ -1,0 +1,92 @@
+/* Page background setup */
+body {
+  margin: 0;  
+  font-family: Arial, sans-serif;  
+  background-image: url('../Projects/pics/sdg2.jpg');  
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  display: flex;
+  flex-direction: column; /* Important for header + form stack */
+  align-items: center;
+}
+
+/* Header layout */
+header {
+  position: relative;
+  width: 100vw;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Make h2 centered */
+header h2 {
+  margin: 0;
+}
+
+/* Button on top-left corner */
+header .btn {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #2cb58c;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fbfbfb;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+}
+
+header .btn:hover {
+  transform: translateY(-50%) scale(1.08);
+  background-color: #38a17c;
+}
+
+/* Form styling */
+form { 
+  background-color: #ffffff; 
+  padding: 30px 40px; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  width: 100%; 
+  max-width: 600px; 
+  box-sizing: border-box; 
+  overflow-y: auto; 
+  max-height: 90vh; 
+  margin-top: 20px;
+} 
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select { 
+  width: 100%; 
+  padding: 12px 20px; 
+  margin: 8px 0; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+} 
+
+input[type="submit"] { 
+  width: 100%; 
+  background-color: #01CD53; 
+  color: white; 
+  padding: 14px 20px; 
+  margin: 8px 0; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+} 
+
+input[type="submit"]:hover { 
+  background-color: #00E25A; 
+}

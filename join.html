@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Join Us</title>
+<link rel="stylesheet" href="JoinUs.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Cyber<span>Sentinel</span></div>
+            <ul class="nav_links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="join.html" class="active">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <div class="left-side-text">
+            <h1>Join <span>CyberSentinel</span></h1>
+            <div class="line"></div>
+            <p>CyberSentinel is a passionate team of ethical hackers, cybersecurity analysts, 
+                and systems engineers dedicated to protecting the digital world. We specialize 
+                in identifying vulnerabilities before attackers do, building strong defenses, 
+                and responding quickly when threats arise. Driven by a mission to make cybersecurity 
+                accessible and effective for businesses of all sizes, our team combines deep technical 
+                expertise with real-world experience. Whether it's securing networkstraining teams, or 
+                responding to incidents, we work closely with our clients to keep their data, systems, 
+                and reputation safe. Be part of a team that strengthens digital defenses with integrity and 
+                innovation.</p>
+    </div>
+
+    <div class="form-container">
+        <h1>Join Our Team</h1>
+        <form id="joinForm" class="job-form">
+  <label for="firstname">First Name</label>
+  <input id="firstname" name="firstname" type="text" required>
+
+  <label for="middlename">Middle Initial</label>
+  <input id="middlename" name="middlename" type="text" maxlength="1" required>
+
+  <label for="lastname">Last Name</label>
+  <input id="lastname" name="lastname" type="text" required>
+
+  <label for="age">Age</label>
+  <input id="age" name="age" type="number" min="18" max="65" required>
+
+  <label for="address">Address</label>
+  <input id="address" name="address" type="text" required>
+
+  <label for="email">Email</label>
+  <input id="email" name="email" type="email" required>
+
+  <label for="education">Educational Background</label>
+  <input id="education" name="education" type="text" required>
+
+  <br>
+  <button type="button" id="reviewButton">REVIEW</button>
+</form>
+
+        <div class="modal" id="loadingModal">
+          <div class="modal-inner">
+            <h2>Submitting...</h2>
+            <div id="loadingBarContainer">
+              <div id="loadingBar"></div>
+            </div>
+          </div>
+        </div>
+<!-- Review Modal -->
+      <div class="modal" id="reviewModal">
+              <div class="modal-inner">
+                <span class="modal-close" id="closeReview">&times;</span>
+                <h2>Review Your Information</h2>
+                <ul id="reviewList" class="review-style-list"></ul>
+                <button id="finalSubmit">Submit</button>
+              </div>
+            </div>
+
+            <!-- Thank You Modal -->
+            <div class="modal" id="thankYouModal">
+              <div class="modal-inner">
+                <h2>Thank You for Applying!</h2>
+                <p>Do you want to refill the form?</p>
+                <button id="refill">Yes</button>
+                <button id="noRefill">No</button>
+              </div>
+            </div>
+        </div>
+</div>
+
+    <footer>
+        <p>Personal Website Decano &copy; 2025</p>
+    </footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

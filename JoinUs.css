@@ -1,0 +1,302 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(to right, rgb(44, 44, 44), rgb(3, 3, 3));
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 15px 5%;
+    background: #181818;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-left: 5%;
+    margin-right: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo span {
+    background: linear-gradient(to right, #4dd8ba,#3fd7cf,
+                                #34c4d1,#19dedb,#3fdfc9,#25cfaa);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+.nav_links {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    margin-right: 5%;
+    padding: 0;
+}
+
+.nav_links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.nav_links li a:hover {
+    color: #4dd8ba;
+    transform: scale(1.08);
+}
+
+.nav_links a.active {
+    background: linear-gradient(to right, #4dd8ba,#3fd7cf,
+                                #34c4d1,#19dedb,#3fdfc9,#25cfaa);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+    font-weight: bold;
+    border-bottom: 2px solid rgb(77, 216, 186);
+}
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 100px 10% 100px;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.left-side-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    max-width: 50%;
+    flex: 1;
+}
+
+.left-side-text .line{
+    height: 3px;
+    background-color: #4dd8ba;
+    width: 760px;
+}
+
+.left-side-text span {
+    background: linear-gradient(to right, #4dd8ba,#3fd7cf,
+                                #34c4d1,#19dedb,#3fdfc9,#25cfaa);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gradient 2.5s linear infinite;
+}
+
+.left-side-text p {
+    font-size: 22px;
+    font-weight: normal;
+    font-family: Helvetica;
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.left-side-text h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.form-container {
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 450px;
+    width: 100%;
+    background: #1e1e1e;
+    padding: 40px;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-container h1 {
+    color: #4dd8ba;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 32px;
+}
+
+.job-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.job-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+}
+
+.job-form button {
+    width: 100%;
+    padding: 10px;
+    background: #4dd8ba;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.job-form button:hover {
+    background: #38a17c;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: white;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: none;
+  text-align: center;
+}
+
+
+.modal.open {
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #4dd8ba;
+}
+
+.modal button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #4dd8ba;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#loadingBarContainer {
+  width: 100%;
+  height: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+#loadingBar {
+  height: 100%;
+  width: 0%;
+  background-color: #4dd8ba;
+  border-radius: 10px;
+  transition: width 2s ease-in-out;
+}
+
+.review-style-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 14px;
+  color: #ddd;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.review-style-list li {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 8px;
+}
+
+.review-style-list li:last-child {
+  border-bottom: none;
+}
+
+.review-style-list strong {
+  color: #4dd8ba;
+  font-weight: 600;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #1e1e1e;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.left-side-text {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all 1s ease;
+}
+
+.form-container {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+}
+
+.left-side-text.animate {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form-container.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes animate-gradient{
+    to {
+        background-position: 200%;
+    }
+}

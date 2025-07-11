@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="home.css"> 
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo" >Cyber<span>Sentinel</span></div>
+            <ul class="nav_links">                
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </nav>
+    </header>
+        <div class="hero-flex">
+            <div class="left-side-text">
+                Secured <span>Systems</span><br> 
+                Booming <span>Business</span><br>
+                <p>
+                HAVE AN <span>IMPENETRABLE SECURITY</span><br> 
+                LIKE AN <span>IMPERIAL FIST FORTRESS</span><br>
+                </p>
+
+                <div class="buttons">
+                <button id="scrollToServices">SERVICES</button>
+                <button onclick="location.href='about.html'">ABOUT US</button>
+                </div>
+            </div>
+
+            <div class="orbit-center">
+                <div class="system-orbit-wrapper">
+                    <img src="assets/system.png" class="system" />
+
+                    <div class="orbiter orbit1"><img src="assets/shield1.png" class="locked-face" /></div>
+                    <div class="orbiter orbit2"><img src="assets/shield2.png" class="locked-face" /></div>
+                    <div class="orbiter orbit3"><img src="assets/shield3.png" class="locked-face" /></div>
+                    <div class="orbiter orbit4"><img src="assets/shield4.png" class="locked-face" /></div>
+                    <div class="orbiter orbit5"><img src="assets/shield5.png" class="locked-face" /></div>
+                    <div class="orbiter orbit6"><img src="assets/shield6.png" class="locked-face" /></div>
+                </div>
+            </div>
+        </div>
+
+    <section class="services-section" id="services-section">
+            <div class="services-header">
+                <h2>Our Services</h2>
+            <div class="line"></div>
+            </div>
+        <div class="services-grid">
+            <div class="service-box">
+                <h3>Network Security</h3>
+                <p class="description">We secure your company's digital infrastructure from cyber threats.</p>
+                <p class="price">Starting at <strong>₱15,000</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+
+            <div class="service-box">
+                <h3>Penetration Testing</h3>
+                <p class="description">Identify and patch security holes before hackers find them.</p>
+                <p class="price">Starting at <strong>₱20,000</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+
+            <div class="service-box">
+                <h3>Employee Training</h3>
+                <p class="description">Educate your team to detect phishing and prevent attacks.</p>
+                <p class="price">Starting at <strong>₱10,000</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+
+            <div class="service-box">
+                <h3>Managed Detection & Response (MDR)</h3>
+                <p class="description">24/7 monitoring, threat hunting, and rapid incident response.</p>
+                <p class="price">Starting at <strong>₱2,500</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+
+            <div class="service-box">
+                <h3>Incident Response & Recovery</h3>
+                <p class="description">Forensic investigation and remediation when a breach occurs.</p>
+                <p class="price">Starting at <strong>₱100,000</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+
+            <div class="service-box">
+                <h3>Firewall & Intrusion Detection Systems (IDS)</h3>
+                <p class="description">Network boundary defense.</p>
+                <p class="price">Starting at <strong>₱50,000</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+
+            <div class="service-box">
+                <h3>Cloud Security Services</h3>
+                <p class="description">Secure configuration and monitoring of AWS/Azure/GCP environments.</p>
+                <p class="price">Starting at <strong>₱25,000</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+
+            <div class="service-box">
+                <h3>Compliance Audits (e.g., PCI‑DSS, HIPAA,)</h3>
+                <p class="description">Gap analysis, documentation, and audit prep.</p>
+                <p class="price">Starting at <strong>₱25,000</strong></p>
+                <button class="hire-btn">Hire Service</button>
+            </div>
+        </div>
+    </section>
+
+        <div class="popup-overlay" id="popup">
+            <div class="popup-form">
+                <span id="close-btn">&times;</span>
+                <h2>Hire <span id="service-name">Service</span></h2>
+                
+                <!-- Actual Form -->
+                <form id="hire-form">
+                <label>CyberSentinel Service</label>
+                <input type="text" id="serviceInput" name="service" readonly>
+
+                <label>Company (if applicable)</label>
+                <input type="text" name="company" id="companyInput" placeholder="Company Name">
+
+                <label>Email</label>
+                <input type="email" name="email" id="emailInput" required placeholder="you@example.com">
+
+                <label>Contact Number</label>
+                <input type="tel" name="contact" id="contactInput" required placeholder="09XXXXXXXXX">
+
+                <button type="button" id="reviewBtn">Review Info</button>
+                </form>
+
+                <!-- Review Modal -->
+                <div class="review-modal" id="reviewModal" style="display:none;">
+                <h3>Review Your Information</h3>
+                <p><strong>Service:</strong> <span id="reviewService"></span></p>
+                <p><strong>Price:</strong> <span id="reviewPrice"></span></p>
+                <p><strong>Company:</strong> <span id="reviewCompany"></span></p>
+                <p><strong>Email:</strong> <span id="reviewEmail"></span></p>
+                <p><strong>Contact:</strong> <span id="reviewContact"></span></p>
+                <div class="review-buttons">
+                    <button id="confirmSubmit">Confirm</button>
+                    <button id="goBack">Go Back</button>
+                </div>
+                </div>
+                <div class="modal" id="serviceLoadingModal">
+                    <div class="modal-inner">
+                        <h2>Processing Request...</h2>
+                        <div id="serviceLoadingBarContainer">
+                            <div id="serviceLoadingBar"></div>
+                        </div>
+                    </div>
+                </div>
+                    <!-- Thank You Modal for Services -->
+                <div class="modal" id="serviceThankYouModal">
+                    <div class="modal-inner">
+                        <h2>Thank You!</h2>
+                        <p>Your service request was received.</p>
+                        <button id="serviceClose">Close</button>
+                    </div>
+                </div>
+            </div> <!-- End .popup-form -->
+        </div> <!-- End .popup-overlay -->
+ <footer>
+  <p>Personal Website Decano &copy; 2025</p>
+ </footer>
+ 
+<script src="main.js"></script>
+
+</body>
+</html>

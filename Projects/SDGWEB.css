@@ -1,0 +1,132 @@
+body {
+ font-family: Arial, sans-serif;
+ margin: 0;
+ padding: 0;
+ background-color: white;
+}
+h2 {
+ font-size: 36px;
+ font-family: sans-serif;
+}
+.container {
+ display: flex;
+ max-width: 1200px;
+ margin: 20px auto;
+ background-color: #fff;
+}
+.left-column {
+ width: 70%;
+ padding: 20px;
+ background-color: #e0e0e0;
+}
+.right-column {
+ width: 30%;
+ padding: 20px;
+ background-color: #f9f9f9;
+}
+img {
+ width: 150px;
+ height: 150px;
+ border-radius: 10px;
+}
+.grid-container {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+ gap: 20px;
+ padding: 20px;
+ max-width: 1000px;
+ margin: auto;
+}
+.grid-container img {
+ width: 100%;
+ height: auto;
+ border-radius: 10px;
+ display: block;
+}
+
+header {
+  background-color: #28B8F6;
+  color: white;
+  padding: 25px 0;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  position: sticky;
+}
+
+header h1 {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: 28px;
+}
+
+header .btn {
+  margin-left: 20px;
+  margin-right: auto;
+  background-color: #2cb58c;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fbfbfb;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  text-decoration: none;
+  transform: translateY(-50%);
+}
+
+header .btn:hover {
+  transform: translateY(-50%) scale(1.08);
+  background-color: #38a17c;
+}
+
+footer {
+ background-color: #28B8F6;
+ color: white;
+ text-align: center;
+ padding: 20px;
+ width: 100%;
+ position: relative;
+ bottom: 0;
+}
+
+button {
+  width: 220px;
+  background-color: #2cb58c;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fbfbfb;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: transform 0.4s ease, background-color 0.4s ease;
+  display: block;
+  margin-left: 2%;
+}
+
+button:hover{
+  transform: scale(1.08);
+  background-color: #38a17c;
+}
+
+@media (max-width: 768px) {
+ .container {
+   flex-direction: column;
+ }
+ .left-column, .right-column {
+   width: 100%;
+ }
+}
